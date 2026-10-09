@@ -1,0 +1,2568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="INNOVATION Labs - Learn Robotics, Artificial Intelligence, Python, IoT and Generative AI through practical project-based learning.">
+
+    <title>INNOVATION Labs | Robotics & AI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         HOME PAGE DESIGN
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           GLOBAL HOME PAGE
+        ====================================================== */
+
+        :root {
+
+            --cream: #f7f2e8;
+
+            --cream-light: #fffaf2;
+
+            --white: #ffffff;
+
+            --orange: #f28c28;
+
+            --orange-dark: #d96f12;
+
+            --brown: #3a2417;
+
+            --brown-light: #654632;
+
+            --text: #49372c;
+
+            --muted: #79695e;
+
+            --border: #eadfd2;
+
+            --shadow: 0 15px 40px rgba(76, 48, 28, 0.10);
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            font-family: "DM Sans", sans-serif;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        img {
+
+            max-width: 100%;
+
+            display: block;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .new-navbar {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 18px 6%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: rgba(255, 250, 242, 0.96);
+
+            border-bottom: 1px solid var(--border);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(12px);
+
+        }
+
+
+        .new-logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+        }
+
+
+        .new-logo img {
+
+            width: 48px;
+
+            height: 48px;
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+        }
+
+
+        .new-logo-text {
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            color: var(--brown);
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        .new-nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .new-nav-links a {
+
+            color: var(--brown);
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .new-nav-links a:hover,
+
+        .new-nav-links a.active {
+
+            color: var(--orange);
+
+        }
+
+
+        .new-nav-button {
+
+            background: var(--orange);
+
+            color: #ffffff !important;
+
+            padding: 13px 23px;
+
+            border-radius: 50px;
+
+            font-weight: 700 !important;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .new-nav-button:hover {
+
+            background: var(--orange-dark);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .new-hero {
+
+            padding: 70px 6% 80px;
+
+            background: var(--cream);
+
+        }
+
+
+        .new-hero-inner {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .hero-label {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 15px;
+
+            background: #fff1df;
+
+            color: var(--orange-dark);
+
+            border: 1px solid #f4d5b1;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.7px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero-label span {
+
+            width: 8px;
+
+            height: 8px;
+
+            background: var(--orange);
+
+            border-radius: 50%;
+
+        }
+
+
+        .new-hero h1 {
+
+            margin: 0;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(48px, 6vw, 82px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            color: var(--brown);
+
+        }
+
+
+        .new-hero h1 span {
+
+            color: var(--orange);
+
+        }
+
+
+        .new-hero-description {
+
+            max-width: 590px;
+
+            margin: 28px 0 32px;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+
+            color: var(--muted);
+
+        }
+
+
+        .hero-actions {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .orange-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 15px 25px;
+
+            border-radius: 50px;
+
+            background: var(--orange);
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+
+            box-shadow: 0 8px 20px rgba(242, 140, 40, 0.22);
+
+        }
+
+
+        .orange-button:hover {
+
+            background: var(--orange-dark);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .outline-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 14px 24px;
+
+            border-radius: 50px;
+
+            border: 1.5px solid var(--brown);
+
+            color: var(--brown);
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .outline-button:hover {
+
+            background: var(--brown);
+
+            color: #ffffff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* HERO IMAGE */
+
+        .new-hero-visual {
+
+            position: relative;
+
+        }
+
+
+        .new-hero-image {
+
+            width: 100%;
+
+            height: 530px;
+
+            object-fit: cover;
+
+            border-radius: 40px;
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .hero-floating-card {
+
+            position: absolute;
+
+            left: -28px;
+
+            bottom: 30px;
+
+            background: #ffffff;
+
+            padding: 18px 22px;
+
+            border-radius: 20px;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid var(--border);
+
+        }
+
+
+        .hero-floating-card strong {
+
+            display: block;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 25px;
+
+            color: var(--brown);
+
+        }
+
+
+        .hero-floating-card span {
+
+            font-size: 13px;
+
+            color: var(--muted);
+
+        }
+
+
+        /* =====================================================
+           STATS
+        ====================================================== */
+
+        .stats-section {
+
+            padding: 0 6% 80px;
+
+            background: var(--cream);
+
+        }
+
+
+        .stats-container {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            background: var(--brown);
+
+            color: #ffffff;
+
+            border-radius: 30px;
+
+            padding: 28px 35px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .stat-item {
+
+            text-align: center;
+
+            padding: 15px;
+
+        }
+
+
+        .stat-item strong {
+
+            display: block;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 32px;
+
+            color: #ffffff;
+
+        }
+
+
+        .stat-item span {
+
+            color: #e8d9cc;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+        ====================================================== */
+
+        .new-section {
+
+            padding: 100px 6%;
+
+        }
+
+
+        .section-inner {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+        }
+
+
+        .section-kicker {
+
+            color: var(--orange-dark);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .section-title {
+
+            margin: 0;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(36px, 4vw, 55px);
+
+            line-height: 1.05;
+
+            color: var(--brown);
+
+            letter-spacing: -1.5px;
+
+        }
+
+
+        .section-title span {
+
+            color: var(--orange);
+
+        }
+
+
+        .section-description {
+
+            max-width: 650px;
+
+            margin: 18px 0 45px;
+
+            color: var(--muted);
+
+            line-height: 1.7;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           COURSES
+        ====================================================== */
+
+        .courses-area {
+
+            background: var(--cream-light);
+
+        }
+
+
+        .course-grid-new {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 24px;
+
+        }
+
+
+        .course-card-new {
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 8px 25px rgba(72, 46, 28, 0.05);
+
+        }
+
+
+        .course-card-new:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .course-card-image {
+
+            height: 230px;
+
+            overflow: hidden;
+
+        }
+
+
+        .course-card-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s ease;
+
+        }
+
+
+        .course-card-new:hover .course-card-image img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .course-card-content {
+
+            padding: 25px;
+
+        }
+
+
+        .course-number-new {
+
+            display: inline-block;
+
+            color: var(--orange-dark);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .course-card-content h3 {
+
+            margin: 0 0 12px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            color: var(--brown);
+
+            font-size: 23px;
+
+        }
+
+
+        .course-card-content p {
+
+            margin: 0 0 18px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.65;
+
+        }
+
+
+        .course-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .course-tag {
+
+            padding: 7px 11px;
+
+            background: #fff4e6;
+
+            border-radius: 50px;
+
+            color: var(--brown-light);
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        .course-link {
+
+            color: var(--orange-dark);
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+        }
+
+
+        .course-link:hover {
+
+            color: var(--brown);
+
+        }
+
+
+        /* =====================================================
+           WHY SECTION
+        ====================================================== */
+
+        .why-new {
+
+            background: var(--cream);
+
+        }
+
+
+        .benefits-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 24px;
+
+        }
+
+
+        .benefit-card {
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 26px;
+
+            padding: 30px;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .benefit-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow: var(--shadow);
+
+        }
+
+
+        .benefit-icon {
+
+            width: 58px;
+
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #fff1df;
+
+            border-radius: 18px;
+
+            font-size: 28px;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .benefit-card h3 {
+
+            margin: 0 0 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            color: var(--brown);
+
+            font-size: 22px;
+
+        }
+
+
+        .benefit-card p {
+
+            margin: 0;
+
+            color: var(--muted);
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           PROJECT SECTION
+        ====================================================== */
+
+        .project-new {
+
+            background: var(--brown);
+
+            color: #ffffff;
+
+        }
+
+
+        .project-inner {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .project-new .section-kicker {
+
+            color: #f5a65b;
+
+        }
+
+
+        .project-new .section-title {
+
+            color: #ffffff;
+
+        }
+
+
+        .project-new .section-title span {
+
+            color: #f5a65b;
+
+        }
+
+
+        .project-description {
+
+            color: #dbcfc7;
+
+            line-height: 1.75;
+
+            margin: 22px 0 30px;
+
+            max-width: 520px;
+
+        }
+
+
+        .project-image-new {
+
+            width: 100%;
+
+            height: 450px;
+
+            object-fit: cover;
+
+            border-radius: 35px;
+
+        }
+
+
+        /* =====================================================
+           TECHNOLOGIES
+        ====================================================== */
+
+        .technology-section {
+
+            background: var(--cream-light);
+
+        }
+
+
+        .technology-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .technology-card {
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .technology-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: #efc49a;
+
+        }
+
+
+        .technology-icon {
+
+            font-size: 32px;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .technology-card h3 {
+
+            margin: 0 0 7px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            color: var(--brown);
+
+        }
+
+
+        .technology-card p {
+
+            margin: 0;
+
+            font-size: 13px;
+
+            color: var(--muted);
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .new-cta {
+
+            padding: 90px 6%;
+
+            background: var(--cream);
+
+        }
+
+
+        .cta-box {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            background: #f28c28;
+
+            border-radius: 35px;
+
+            padding: 60px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .cta-box::before {
+
+            content: "";
+
+            width: 250px;
+
+            height: 250px;
+
+            position: absolute;
+
+            top: -120px;
+
+            right: -60px;
+
+            border: 2px solid rgba(255,255,255,0.25);
+
+            border-radius: 50%;
+
+        }
+
+
+        .cta-box h2 {
+
+            margin: 0;
+
+            color: #ffffff;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(35px, 4vw, 55px);
+
+            letter-spacing: -1px;
+
+        }
+
+
+        .cta-box p {
+
+            color: #fff1df;
+
+            max-width: 600px;
+
+            margin: 18px auto 28px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            padding: 15px 28px;
+
+            border-radius: 50px;
+
+            background: var(--brown);
+
+            color: #ffffff;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .cta-button:hover {
+
+            background: #24150e;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .new-footer {
+
+            background: #2b1b12;
+
+            color: #ffffff;
+
+            padding: 55px 6% 25px;
+
+        }
+
+
+        .footer-inner {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+        }
+
+
+        .footer-brand h3 {
+
+            margin: 0 0 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 24px;
+
+        }
+
+
+        .footer-brand p {
+
+            margin: 0;
+
+            color: #cdbfb5;
+
+            font-size: 14px;
+
+        }
+
+
+        .footer-links-new {
+
+            display: flex;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .footer-links-new a {
+
+            color: #dfd1c7;
+
+            font-size: 14px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .footer-links-new a:hover {
+
+            color: #f5a65b;
+
+        }
+
+
+        .footer-bottom {
+
+            max-width: 1250px;
+
+            margin: 35px auto 0;
+
+            padding-top: 22px;
+
+            border-top: 1px solid rgba(255,255,255,0.12);
+
+            text-align: center;
+
+            color: #9f9188;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .new-nav-links {
+
+                gap: 16px;
+
+            }
+
+
+            .new-hero-inner {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .new-hero-image {
+
+                height: 430px;
+
+            }
+
+
+            .course-grid-new {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .benefits-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .project-inner {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .new-navbar {
+
+                padding: 14px 5%;
+
+                flex-wrap: wrap;
+
+                gap: 15px;
+
+            }
+
+
+            .new-logo img {
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
+
+            .new-logo-text {
+
+                font-size: 17px;
+
+            }
+
+
+            .new-nav-links {
+
+                order: 3;
+
+                width: 100%;
+
+                justify-content: center;
+
+                gap: 18px;
+
+                overflow-x: auto;
+
+                padding-bottom: 3px;
+
+            }
+
+
+            .new-nav-links a {
+
+                font-size: 13px;
+
+                white-space: nowrap;
+
+            }
+
+
+            .new-nav-button {
+
+                padding: 10px 16px;
+
+                font-size: 13px;
+
+            }
+
+
+            .new-hero {
+
+                padding: 55px 5% 60px;
+
+            }
+
+
+            .new-hero h1 {
+
+                font-size: 50px;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .new-hero-description {
+
+                font-size: 16px;
+
+            }
+
+
+            .new-hero-image {
+
+                height: 340px;
+
+                border-radius: 28px;
+
+            }
+
+
+            .hero-floating-card {
+
+                left: 15px;
+
+                bottom: 20px;
+
+            }
+
+
+            .stats-section {
+
+                padding: 0 5% 60px;
+
+            }
+
+
+            .stats-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+
+                padding: 20px;
+
+                border-radius: 24px;
+
+            }
+
+
+            .stat-item {
+
+                padding: 12px;
+
+            }
+
+
+            .new-section {
+
+                padding: 70px 5%;
+
+            }
+
+
+            .section-title {
+
+                font-size: 38px;
+
+            }
+
+
+            .course-grid-new {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .course-card-image {
+
+                height: 220px;
+
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .project-image-new {
+
+                height: 330px;
+
+            }
+
+
+            .new-cta {
+
+                padding: 65px 5%;
+
+            }
+
+
+            .cta-box {
+
+                padding: 45px 25px;
+
+                border-radius: 28px;
+
+            }
+
+
+            .footer-inner {
+
+                flex-direction: column;
+
+            }
+
+
+            .footer-links-new {
+
+                gap: 15px;
+
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .new-hero h1 {
+
+                font-size: 44px;
+
+            }
+
+
+            .hero-actions {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+
+            .orange-button,
+
+            .outline-button {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="new-navbar">
+
+        <a href="index.html" class="new-logo">
+
+            <img src="images/logo.png"
+                 alt="INNOVATION Labs Logo">
+
+            <span class="new-logo-text">
+                INNOVATION LABS
+            </span>
+
+        </a>
+
+
+        <nav class="new-nav-links">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="contact.html"
+           class="new-nav-button">
+
+            Enroll Now
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="new-hero">
+
+        <div class="new-hero-inner">
+
+
+            <div class="new-hero-content">
+
+                <div class="hero-label">
+
+                    <span></span>
+
+                    ROBOTICS • AI • CODING • INNOVATION
+
+                </div>
+
+
+                <h1>
+
+                    Build.
+
+                    <br>
+
+                    Learn.
+
+                    <br>
+
+                    <span>Innovate.</span>
+
+                </h1>
+
+
+                <p class="new-hero-description">
+
+                    Empowering students with practical skills in
+                    Robotics, Artificial Intelligence, Python,
+                    IoT and Generative AI through hands-on
+                    project-based learning.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a href="courses.html"
+                       class="orange-button">
+
+                        Explore Courses →
+
+                    </a>
+
+
+                    <a href="projects.html"
+                       class="outline-button">
+
+                        View Projects
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="new-hero-visual">
+
+                <img src="images/hero-robot.jpg"
+                     alt="Robotics and Artificial Intelligence"
+                     class="new-hero-image">
+
+
+                <div class="hero-floating-card">
+
+                    <strong>5+</strong>
+
+                    <span>
+                        Future-ready courses
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STATS
+    ====================================================== -->
+
+    <section class="stats-section">
+
+        <div class="stats-container">
+
+
+            <div class="stat-item">
+
+                <strong>05</strong>
+
+                <span>
+                    Technology Courses
+                </span>
+
+            </div>
+
+
+            <div class="stat-item">
+
+                <strong>100%</strong>
+
+                <span>
+                    Practical Learning
+                </span>
+
+            </div>
+
+
+            <div class="stat-item">
+
+                <strong>∞</strong>
+
+                <span>
+                    Ideas to Build
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COURSES
+    ====================================================== -->
+
+    <section class="new-section courses-area">
+
+        <div class="section-inner">
+
+
+            <div class="section-kicker">
+                WHAT WE TEACH
+            </div>
+
+
+            <h2 class="section-title">
+
+                Discover Our
+
+                <span>
+                    Courses
+                </span>
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Learn future-ready technologies through
+                practical projects, experimentation and
+                real-world problem solving.
+
+            </p>
+
+
+
+            <div class="course-grid-new">
+
+
+                <!-- ROBOTICS -->
+
+                <div class="course-card-new">
+
+                    <div class="course-card-image">
+
+                        <img src="images/robotics.jpg"
+                             alt="Robotics Course">
+
+                    </div>
+
+
+                    <div class="course-card-content">
+
+                        <span class="course-number-new">
+                            01
+                        </span>
+
+
+                        <h3>
+                            🤖 Robotics
+                        </h3>
+
+
+                        <p>
+
+                            Learn robotics through hands-on
+                            projects using Arduino, sensors,
+                            motors and automation.
+
+                        </p>
+
+
+                        <div class="course-tags">
+
+                            <span class="course-tag">
+                                Arduino
+                            </span>
+
+                            <span class="course-tag">
+                                Sensors
+                            </span>
+
+                            <span class="course-tag">
+                                Motors
+                            </span>
+
+                            <span class="course-tag">
+                                Automation
+                            </span>
+
+                        </div>
+
+
+                        <a href="courses.html"
+                           class="course-link">
+
+                            View Course →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AI -->
+
+                <div class="course-card-new">
+
+                    <div class="course-card-image">
+
+                        <img src="images/ai.jpg"
+                             alt="Artificial Intelligence Course">
+
+                    </div>
+
+
+                    <div class="course-card-content">
+
+                        <span class="course-number-new">
+                            02
+                        </span>
+
+
+                        <h3>
+                            🧠 Artificial Intelligence
+                        </h3>
+
+
+                        <p>
+
+                            Understand Artificial Intelligence
+                            and build intelligent applications
+                            using modern AI technologies.
+
+                        </p>
+
+
+                        <div class="course-tags">
+
+                            <span class="course-tag">
+                                AI Fundamentals
+                            </span>
+
+                            <span class="course-tag">
+                                Machine Learning
+                            </span>
+
+                            <span class="course-tag">
+                                Computer Vision
+                            </span>
+
+                            <span class="course-tag">
+                                AI Projects
+                            </span>
+
+                        </div>
+
+
+                        <a href="courses.html"
+                           class="course-link">
+
+                            View Course →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PYTHON -->
+
+                <div class="course-card-new">
+
+                    <div class="course-card-image">
+
+                        <img src="images/python.jpg"
+                             alt="Python Programming Course">
+
+                    </div>
+
+
+                    <div class="course-card-content">
+
+                        <span class="course-number-new">
+                            03
+                        </span>
+
+
+                        <h3>
+                            🐍 Python Programming
+                        </h3>
+
+
+                        <p>
+
+                            Learn Python from the basics and
+                            progress towards real-world
+                            programming and AI applications.
+
+                        </p>
+
+
+                        <div class="course-tags">
+
+                            <span class="course-tag">
+                                Python Basics
+                            </span>
+
+                            <span class="course-tag">
+                                OOP
+                            </span>
+
+                            <span class="course-tag">
+                                Automation
+                            </span>
+
+                            <span class="course-tag">
+                                Projects
+                            </span>
+
+                        </div>
+
+
+                        <a href="courses.html"
+                           class="course-link">
+
+                            View Course →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- IOT -->
+
+                <div class="course-card-new">
+
+                    <div class="course-card-image">
+
+                        <img src="images/iot.jpg"
+                             alt="Internet of Things Course">
+
+                    </div>
+
+
+                    <div class="course-card-content">
+
+                        <span class="course-number-new">
+                            04
+                        </span>
+
+
+                        <h3>
+                            🌐 Internet of Things
+                        </h3>
+
+
+                        <p>
+
+                            Build connected smart devices using
+                            sensors, microcontrollers, Wi-Fi
+                            and cloud technologies.
+
+                        </p>
+
+
+                        <div class="course-tags">
+
+                            <span class="course-tag">
+                                ESP32
+                            </span>
+
+                            <span class="course-tag">
+                                Sensors
+                            </span>
+
+                            <span class="course-tag">
+                                IoT
+                            </span>
+
+                            <span class="course-tag">
+                                Cloud
+                            </span>
+
+                        </div>
+
+
+                        <a href="courses.html"
+                           class="course-link">
+
+                            View Course →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GENERATIVE AI -->
+
+                <div class="course-card-new">
+
+                    <div class="course-card-image">
+
+                        <img src="images/ai.jpg"
+                             alt="Generative AI Course">
+
+                    </div>
+
+
+                    <div class="course-card-content">
+
+                        <span class="course-number-new">
+                            05
+                        </span>
+
+
+                        <h3>
+                            ✨ Generative AI
+                        </h3>
+
+
+                        <p>
+
+                            Learn modern Generative AI
+                            technologies and build
+                            intelligent AI-powered applications.
+
+                        </p>
+
+
+                        <div class="course-tags">
+
+                            <span class="course-tag">
+                                Prompt Engineering
+                            </span>
+
+                            <span class="course-tag">
+                                LLMs
+                            </span>
+
+                            <span class="course-tag">
+                                RAG
+                            </span>
+
+                            <span class="course-tag">
+                                AI Agents
+                            </span>
+
+                        </div>
+
+
+                        <a href="courses.html"
+                           class="course-link">
+
+                            View Course →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BENEFITS
+    ====================================================== -->
+
+    <section class="new-section why-new">
+
+        <div class="section-inner">
+
+
+            <div class="section-kicker">
+                WHY INNOVATION LABS
+            </div>
+
+
+            <h2 class="section-title">
+
+                Learn By
+
+                <span>
+                    Building
+                </span>
+
+            </h2>
+
+
+            <p class="section-description">
+
+                We believe students learn technology best
+                by creating, experimenting and building
+                real-world projects.
+
+            </p>
+
+
+            <div class="benefits-grid">
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        🤖
+                    </div>
+
+
+                    <h3>
+                        Practical Learning
+                    </h3>
+
+
+                    <p>
+
+                        Learn concepts by building real
+                        Robotics, AI and IoT projects.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        💡
+                    </div>
+
+
+                    <h3>
+                        Innovation
+                    </h3>
+
+
+                    <p>
+
+                        Transform your ideas into working
+                        prototypes and innovative solutions.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        🚀
+                    </div>
+
+
+                    <h3>
+                        Future Skills
+                    </h3>
+
+
+                    <p>
+
+                        Develop skills in AI, Robotics,
+                        IoT, Python and emerging technologies.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         STUDENT PROJECTS
+    ====================================================== -->
+
+    <section class="new-section project-new">
+
+        <div class="project-inner">
+
+
+            <div>
+
+                <div class="section-kicker">
+                    STUDENT PROJECTS
+                </div>
+
+
+                <h2 class="section-title">
+
+                    From Ideas
+
+                    <br>
+
+                    to
+
+                    <span>
+                        Reality
+                    </span>
+
+                </h2>
+
+
+                <p class="project-description">
+
+                    Our students learn by designing and
+                    developing real-world projects in
+                    Robotics, Artificial Intelligence,
+                    IoT, Python and Generative AI.
+
+                </p>
+
+
+                <a href="projects.html"
+                   class="orange-button">
+
+                    Explore Projects →
+
+                </a>
+
+            </div>
+
+
+
+            <div>
+
+                <img src="images/project-robotics.jpg"
+                     alt="Student Robotics Project"
+                     class="project-image-new">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TECHNOLOGIES
+    ====================================================== -->
+
+    <section class="new-section technology-section">
+
+        <div class="section-inner">
+
+
+            <div class="section-kicker">
+                TECHNOLOGY
+            </div>
+
+
+            <h2 class="section-title">
+
+                Technologies We
+
+                <span>
+                    Teach
+                </span>
+
+            </h2>
+
+
+            <p class="section-description">
+
+                Explore the tools and technologies used
+                to build modern robotics and intelligent
+                applications.
+
+            </p>
+
+
+            <div class="technology-grid">
+
+
+                <div class="technology-card">
+
+                    <div class="technology-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Arduino
+                    </h3>
+
+                    <p>
+                        Microcontrollers, sensors,
+                        motors and automation.
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <div class="technology-icon">
+                        🐍
+                    </div>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Programming, automation,
+                        AI and data processing.
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <div class="technology-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        AI & ML
+                    </h3>
+
+                    <p>
+                        Machine learning, computer
+                        vision and Generative AI.
+                    </p>
+
+                </div>
+
+
+
+                <div class="technology-card">
+
+                    <div class="technology-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        IoT
+                    </h3>
+
+                    <p>
+                        Connected devices, sensors,
+                        Wi-Fi and cloud systems.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALL TO ACTION
+    ====================================================== -->
+
+    <section class="new-cta">
+
+        <div class="cta-box">
+
+
+            <h2>
+                Ready to Start Building?
+            </h2>
+
+
+            <p>
+
+                Join INNOVATION Labs and turn your ideas
+                into real-world technology.
+
+            </p>
+
+
+            <a href="contact.html"
+               class="cta-button">
+
+                Get Started →
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="new-footer">
+
+        <div class="footer-inner">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    INNOVATION LABS
+                </h3>
+
+
+                <p>
+                    Robotics • AI • Coding • Innovation
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links-new">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 INNOVATION Labs.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
