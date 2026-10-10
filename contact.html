@@ -94,15 +94,14 @@
     <div class="courses-hero-content">
 
         <div class="hero-small">
-
             ● GET IN TOUCH
-
         </div>
 
 
         <h1>
 
             Let's
+
             <span>
                 Connect.
             </span>
@@ -155,6 +154,7 @@
                 <h3>
 
                     Connect With
+
                     <span>
                         INNOVATION LABS
                     </span>
@@ -280,6 +280,7 @@
             <h3>
 
                 Send Us an
+
                 <span>
                     Enquiry
                 </span>
@@ -296,11 +297,14 @@
 
 
 
-            <!-- FORM -->
+            <!-- =================================================
+                 FORM
+            ================================================== -->
 
             <form
                 action="https://formspree.io/f/xzedrvpp"
                 method="POST"
+                id="enquiryForm"
             >
 
 
@@ -321,20 +325,95 @@
 
 
 
-                <!-- EMAIL -->
+                <!-- =================================================
+                     EMAIL
+                ================================================== -->
 
                 <label for="email">
                     Email Address
                 </label>
 
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    required
+                <div class="email-verification-row">
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Please enter a valid email address, for example name@gmail.com"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="sendOtpButton"
+                    >
+                        Verify Email
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     OTP
+                ================================================== -->
+
+                <div
+                    id="otpSection"
+                    style="display: none;"
                 >
+
+                    <label for="otp">
+                        Enter OTP
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="otp"
+                        name="otp"
+                        placeholder="Enter 6-digit OTP"
+                        maxlength="6"
+                        inputmode="numeric"
+                        autocomplete="one-time-code"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="verifyOtpButton"
+                    >
+                        Verify OTP
+                    </button>
+
+
+                    <p
+                        id="verificationMessage"
+                        style="margin-top: 10px;"
+                    ></p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     EMAIL VERIFIED STATUS
+                ================================================== -->
+
+                <div
+                    id="emailVerifiedMessage"
+                    style="display: none;"
+                >
+
+                    ✓ Email Verified Successfully
+
+                </div>
 
 
 
@@ -421,13 +500,17 @@
 
 
 
-                <!-- SUBMIT -->
+                <!-- =================================================
+                     SUBMIT
+                ================================================== -->
 
                 <button
                     type="submit"
                     class="primary-button"
+                    id="submitEnquiryButton"
+                    disabled
                 >
-                    Send Enquiry
+                    Verify Email First
                 </button>
 
 
@@ -447,6 +530,7 @@
 
 <section class="why-section">
 
+
     <div class="section-heading">
 
         <p>
@@ -457,9 +541,11 @@
         <h2>
 
             Learn.
+
             <span>
                 Build.
             </span>
+
             Innovate.
 
         </h2>
@@ -573,6 +659,7 @@
         <h2>
 
             Start Your
+
             <span>
                 Learning Journey
             </span>
@@ -593,9 +680,7 @@
             href="mailto:roboticsinnovationlabs@gmail.com"
             class="primary-button"
         >
-
             Contact Us →
-
         </a>
 
     </div>
@@ -629,7 +714,8 @@
 
 <!-- =====================================================
      JAVASCRIPT
-===================================================== 
+===================================================== -->
+
 <script src="js/script.js"></script>
 
 
