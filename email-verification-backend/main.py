@@ -27,7 +27,7 @@ SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
 # =====================================================
 
 app = FastAPI(
-    title="INNOVATION LABS Email Verification API"
+    title="Innovation Technologies Email Verification API"
 )
 
 
@@ -70,12 +70,12 @@ class VerifyOTPRequest(BaseModel):
 
 def send_otp_email(receiver_email, otp):
 
-    subject = "INNOVATION LABS - Email Verification OTP"
+    subject = "Innovation Technologies - Email Verification OTP"
 
     message = f"""
 Hello,
 
-Thank you for contacting INNOVATION LABS.
+Thank you for contacting Innovation Technologies.
 
 Your email verification OTP is:
 
@@ -86,7 +86,7 @@ This OTP is valid for 5 minutes.
 Please do not share this OTP with anyone.
 
 Regards,
-INNOVATION LABS
+Innovation Technologies
 Hyderabad, Telangana, India
 """
 
@@ -224,5 +224,5 @@ def verify_otp(data: VerifyOTPRequest):
 def home():
 
     return {
-        "message": "INNOVATION LABS Email Verification API is running."
+        "message": "Innovation Technologies Email Verification API is running."
     }

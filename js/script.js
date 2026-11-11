@@ -1,5 +1,5 @@
 // =====================================================
-// INNOVATION LABS CONTACT FORM
+// Innovation Technologies CONTACT FORM
 // EMAIL VERIFICATION + ENQUIRY
 // =====================================================
 
